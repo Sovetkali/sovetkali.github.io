@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Отключение хромиумного саджеста через конфиг</title>
+</head>
+<body>
+    <form class="paymentForm" action="https://3ds.sdelano.net/browser/cards/tds">
+        <div id="formError">Ошибка</div>
+        <div class="frontCard">
+            <div class="cardType">
+                <img class="bankLogoType" src="">
+                <img class="cardPaymentType" src="">
+            </div>
+            <div class="cardNumber">
+                <div class="cardNumberLabel">Номер карты</div>
+                <input type="tel" class="cardNumberInput form-control" placeholder="1234 5678 9012 3456" name="cardNum">
+            </div>
+            <div class="expireDate">
+                <div class="expireDateLabel">Срок действия</div>
+                <input type="text" class="expireDateInput form-control" placeholder="06/16" name="expireDate">
+            </div>
+
+            <div class="cvv">
+                
+                <div class="cvvLabel">CVC</div>
+                <input type="text" class="cvvInput form-control">
+                
+            </div>
+
+            <div class="cardHolder">
+                <div class="cardHolderLabel">Владелец карты</div>
+                <input type="text" class="cardHolderInput form-control" placeholder="Ivan Ivanov" name="cardHolder">
+            </div>
+        </div>
+        <div class="backCard">
+            <div class="magneticLine"></div>
+        </div>
+        <div id="payBtnBox">
+            <button type="button" class="btn btn-info" id="generateCard">Сгенерировать карту</button>
+            <button type="submit" class="btn btn-primary" id="payCardBtn">Оплатить</button>
+        </div>
+    </form>
+</body>
+</html>
