@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript">
+        
+        let customData = {
+            "passport":"<label for='pass_number'>Номер</label> <input type='text' id='pass_number'> <br><label for='pass_issue_date'>Дата выдачи:</label> <input type='date' id='pass_issue_date'> <br><label for='pass_additional_info'>Дополнительная информация</label> <br><textarea id='pass_additional_info' cols='30' rows='10'></textarea><br>", 
+            "intpassport": "<label for='intpass_number'>Номер</label> <input type='text' id='intpass_number'> <br><label for='intpass_issue_date'>Действителен до:</label> <input type='date' id='pass_issue_date'> <br><label for='intpass_additional_info'>Дополнительная информация</label> <br><textarea id='intpass_additional_info' cols='30' rows='10'></textarea><br>",
+            "inn": "<label for='inn_number'>Номер</label> <input type='text' id='snils_number'> <br><label for='inn_additional_info'>Дополнительная информация</label> <br><textarea id='inn_additional_info' cols='30' rows='10'></textarea><br>",
+            "snils": "<label for='snils_number'>Номер</label> <input type='text' id='snils_number'> <br> <label for='snils_additional_info'>Дополнительная информация</label> <br> <textarea id='snils_additional_info' cols='30' rows='10'></textarea> <br>"
+        }
+
+        function main(){
+            if (document.getElementById('custom_data').innerHTML != ''){
+                document.getElementById('custom_data').innerHTML = ''
+                createCustomForm();
+            }else{
+                createCustomForm()
+            }
+        }
+        
+        function createCustomForm(){
+            let selected = document.getElementById('doc_type');
+            switch(selected.value){
+                case 'passport':
+                    document.getElementById('custom_data').innerHTML = customData['passport'];
+                    break;
+                case 'intpassport':
+                    document.getElementById('custom_data').innerHTML = customData['intpassport'];
+                    break;
+                case 'inn':
+                    document.getElementById('custom_data').innerHTML = customData['inn'];
+                    break;
+                case 'snils':
+                    document.getElementById('custom_data').innerHTML = customData['snils'];
+
+                    break;
+            }
+        }
+    </script>
+    <title>Check JS heurisitc</title>
+</head>
+
+<body>
+    <form action="https://sovetkali.github.io/success.html">
+        <input type="text" placeholder="Имя" id="first_name">
+        <br>
+        <input type="text" placeholder="Фамилия" id="last_name">
+        <br>
+        <input type="text" placeholder="Почта" id="email">
+        <br>
+        <input type="text" placeholder="Телефон" id="phone">
+        <br>
+        <select name="doctypes" id="doc_type" onchange="main()">
+            <option value="empty"></option>
+            <option value="passport">Паспорт</option>
+            <option value="intpassport">Загранпаспорт</option>
+            <option value="inn">ИНН</option>
+            <option value="snils">СНИЛС</option>
+        </select>
+        <br>
+        <div id="custom_data">
+            Выберите тип документа  
+        </div>
+        <input type='submit' name='' id=''>
+    </form>
+
+</body>
+
+</html>
