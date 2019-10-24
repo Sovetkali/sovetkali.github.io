@@ -31,18 +31,23 @@
                     document.getElementsByName('number')[0].setAttribute('id', 'passport_number');
                     document.getElementsByName('date')[0].setAttribute('id', 'passport_date');
                     document.getElementsByName('add_info')[0].setAttribute('id', 'passport_add');
+                    document.getElementsByName('dateLabel')[0].textContent = 'Дата выдачи';
                     if (document.getElementsByName('date')[0].hidden == true){
                         document.getElementsByName('date')[0].hidden = false;
                         document.getElementsByName('dateLabel')[0].hidden = false;
+                        document.getElementsByName('dateLabel')[0].textContent = 'Дата выдачи';
                     }
                     break;
                 case('intpassport'):
                     document.getElementsByName('number')[0].setAttribute('id', 'intpassport_number');
                     document.getElementsByName('date')[0].setAttribute('id', 'intpassport_date');
                     document.getElementsByName('add_info')[0].setAttribute('id', 'intpassport_add');
+                    document.getElementsByName('dateLabel')[0].textContent = 'Действителен до';
                     if (document.getElementsByName('date')[0].hidden == true){
                         document.getElementsByName('date')[0].hidden = false;
                         document.getElementsByName('dateLabel')[0].hidden = false;
+                        document.getElementsByName('dateLabel')[0].hidden = false;
+                        document.getElementsByName('dateLabel')[0].textContent = 'Действителен до';
                     }
                     break;
                 case('inn'):
