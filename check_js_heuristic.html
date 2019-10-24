@@ -40,6 +40,10 @@
                     document.getElementsByName('number')[0].setAttribute('id', 'intpassport_number');
                     document.getElementsByName('date')[0].setAttribute('id', 'intpassport_date');
                     document.getElementsByName('add_info')[0].setAttribute('id', 'intpassport_add');
+                    if (document.getElementsByName('date')[0].hidden == true){
+                        document.getElementsByName('date')[0].hidden = false;
+                        document.getElementsByName('dateLabel')[0].hidden = false;
+                    }
                     break;
                 case('inn'):
                     document.getElementsByName('number')[0].setAttribute('id', 'inn_number');
@@ -59,7 +63,7 @@
                     break;
             }
         }
-        
+
     </script>
     <title>Check JS heurisitc</title>
 </head>
