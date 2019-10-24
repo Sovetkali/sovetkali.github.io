@@ -6,26 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script type="text/javascript">
-        
+
         let customData = {
-            "passport":"<label for='pass_number'>Номер</label> <input type='text' id='pass_number'> <br><label for='pass_issue_date'>Дата выдачи:</label> <input type='date' id='pass_issue_date'> <br><label for='pass_additional_info'>Дополнительная информация</label> <br><textarea id='pass_additional_info' cols='30' rows='10'></textarea><br>", 
+            "passport": "<label for='pass_number'>Номер</label> <input type='text' id='pass_number'> <br><label for='pass_issue_date'>Дата выдачи:</label> <input type='date' id='pass_issue_date'> <br><label for='pass_additional_info'>Дополнительная информация</label> <br><textarea id='pass_additional_info' cols='30' rows='10'></textarea><br>",
             "intpassport": "<label for='intpass_number'>Номер</label> <input type='text' id='intpass_number'> <br><label for='intpass_issue_date'>Действителен до:</label> <input type='date' id='pass_issue_date'> <br><label for='intpass_additional_info'>Дополнительная информация</label> <br><textarea id='intpass_additional_info' cols='30' rows='10'></textarea><br>",
             "inn": "<label for='inn_number'>Номер</label> <input type='text' id='snils_number'> <br><label for='inn_additional_info'>Дополнительная информация</label> <br><textarea id='inn_additional_info' cols='30' rows='10'></textarea><br>",
             "snils": "<label for='snils_number'>Номер</label> <input type='text' id='snils_number'> <br> <label for='snils_additional_info'>Дополнительная информация</label> <br> <textarea id='snils_additional_info' cols='30' rows='10'></textarea> <br>"
         }
 
-        function main(){
-            if (document.getElementById('custom_data').innerHTML != ''){
+        function main() {
+            if (document.getElementById('custom_data').innerHTML != '') {
                 document.getElementById('custom_data').innerHTML = ''
                 createCustomForm();
-            }else{
+            } else {
                 createCustomForm()
             }
         }
-        
-        function createCustomForm(){
+
+        function createCustomForm() {
             let selected = document.getElementById('doc_type');
-            switch(selected.value){
+            switch (selected.value) {
                 case 'passport':
                     document.getElementById('custom_data').innerHTML = customData['passport'];
                     break;
@@ -64,7 +64,10 @@
         </select>
         <br>
         <div id="custom_data">
-            Выберите тип документа  
+            <label for='pass_number'>Номер</label> <input type='text' id='pass_number'> <br><label
+                for='pass_issue_date'>Дата выдачи:</label> <input type='date' id='pass_issue_date'> <br><label
+                for='pass_additional_info'>Дополнительная информация</label> <br><textarea id='pass_additional_info'
+                cols='30' rows='10'></textarea><br>
         </div>
         <input type='submit' name='' id=''>
     </form>
