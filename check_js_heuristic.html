@@ -31,19 +31,35 @@
                     document.getElementsByName('number')[0].setAttribute('id', 'passport_number');
                     document.getElementsByName('date')[0].setAttribute('id', 'passport_date');
                     document.getElementsByName('add_info')[0].setAttribute('id', 'passport_add');
+                    if (document.getElementsByName('date')[0].hidden == true){
+                        document.getElementsByName('date')[0].hidden = false;
+                        document.getElementsByName('dateLabel')[0].hidden = false;
+                    }
                     break;
                 case('intpassport'):
                     document.getElementsByName('number')[0].setAttribute('id', 'intpassport_number');
                     document.getElementsByName('date')[0].setAttribute('id', 'intpassport_date');
                     document.getElementsByName('add_info')[0].setAttribute('id', 'intpassport_add');
                     break;
+                case('inn'):
+                    document.getElementsByName('number')[0].setAttribute('id', 'inn_number');
+                    document.getElementsByName('add_info')[0].setAttribute('id', 'inn_add');
+                    if (document.getElementsByName('date')[0].hidden == false){
+                        document.getElementsByName('date')[0].hidden = true;
+                        document.getElementsByName('dateLabel')[0].hidden = true;
+                    }
+                    break;
+                case('snils'):
+                    document.getElementsByName('number')[0].setAttribute('id', 'snils_number');
+                    document.getElementsByName('add_info')[0].setAttribute('id', 'snils_add');
+                    if (document.getElementsByName('date')[0].hidden == false){
+                        document.getElementsByName('date')[0].hidden = true;
+                        document.getElementsByName('dateLabel')[0].hidden = true;
+                    }
+                    break;
             }
         }
-
-        function setDisable(){
-
-        }
-
+        
     </script>
     <title>Check JS heurisitc</title>
 </head>
@@ -67,13 +83,13 @@
         </select>
         <br>
         <div id="custom_data">
-            <label>Номер</label>
+            <label>Номер:</label>
             <input type='text' id='' name="number">
             <br>
-            <label>Дата выдачи:</label> 
+            <label name="dateLabel">Дата:</label> 
             <input type='date' id='' name="date">
             <br>
-            <label>Дополнительная информация</label>
+            <label>Дополнительная информация:</label>
             <br>
             <textarea id='' cols='30' rows='10' name="add_info"></textarea>
             <br>
