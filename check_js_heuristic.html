@@ -14,20 +14,29 @@
                     setTypes('passport');
                     break;
                 case 'intpassport':
-                    
+                    setTypes('intpassport');
                     break;
                 case 'inn':
-                    
+                    setTypes('inn');
                     break;
                 case 'snils':
-                    
+                    setTypes('snils');
                     break;
             }
         }
 
         function setTypes(docType){
-            if (docType === 'passport'){
-                document.getElementsByName('number').setAttribute('id', 'passport_number')
+            switch(docType){
+                case('passport'):
+                    document.getElementsByName('number')[0].setAttribute('id', 'passport_number');
+                    document.getElementsByName('date')[0].setAttribute('id', 'passport_date');
+                    document.getElementsByName('add_info')[0].setAttribute('id', 'passport_add');
+                    break;
+                case('intpassport'):
+                    document.getElementsByName('number')[0].setAttribute('id', 'intpassport_number');
+                    document.getElementsByName('date')[0].setAttribute('id', 'intpassport_date');
+                    document.getElementsByName('add_info')[0].setAttribute('id', 'intpassport_add');
+                    break;
             }
         }
 
