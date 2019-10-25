@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript">
+
+        function main() {
+            let selected = document.getElementById('doc_type');
+            switch (selected.value) {
+                case 'passport':
+                    setTypes('passport');
+                    break;
+                case 'intpassport':
+                    setTypes('intpassport');
+                    break;
+                case 'inn':
+                    setTypes('inn');
+                    break;
+                case 'snils':
+                    setTypes('snils');
+                    break;
+            }
+        }
+
+        function setTypes(docType){
+            switch(docType){
+                case('passport'):
+                    document.getElementsByName('number')[0].setAttribute('id', 'passport_number');
+                    document.getElementsByName('date')[0].setAttribute('id', 'passport_date');
+                    document.getElementsByName('add_info')[0].setAttribute('id', 'passport_add');
+                    document.getElementsByName('dateLabel')[0].textContent = 'Дата выдачи';
+                    if (document.getElementsByName('date')[0].hidden == true){
+                        document.getElementsByName('date')[0].hidden = false;
+                        document.getElementsByName('dateLabel')[0].hidden = false;
+                        document.getElementsByName('dateLabel')[0].textContent = 'Дата выдачи';
+                    }
+                    break;
+                case('intpassport'):
+                    document.getElementsByName('number')[0].setAttribute('id', 'intpassport_number');
+                    document.getElementsByName('date')[0].setAttribute('id', 'intpassport_date');
+                    document.getElementsByName('add_info')[0].setAttribute('id', 'intpassport_add');
+                    document.getElementsByName('dateLabel')[0].textContent = 'Действителен до';
+                    if (document.getElementsByName('date')[0].hidden == true){
+                        document.getElementsByName('date')[0].hidden = false;
+                        document.getElementsByName('dateLabel')[0].hidden = false;
+                        document.getElementsByName('dateLabel')[0].hidden = false;
+                        document.getElementsByName('dateLabel')[0].textContent = 'Действителен до';
+                    }
+                    break;
+                case('inn'):
+                    document.getElementsByName('number')[0].setAttribute('id', 'inn_number');
+                    document.getElementsByName('add_info')[0].setAttribute('id', 'inn_add');
+                    if (document.getElementsByName('date')[0].hidden == false){
+                        document.getElementsByName('date')[0].hidden = true;
+                        document.getElementsByName('dateLabel')[0].hidden = true;
+                    }
+                    break;
+                case('snils'):
+                    document.getElementsByName('number')[0].setAttribute('id', 'snils_number');
+                    document.getElementsByName('add_info')[0].setAttribute('id', 'snils_add');
+                    if (document.getElementsByName('date')[0].hidden == false){
+                        document.getElementsByName('date')[0].hidden = true;
+                        document.getElementsByName('dateLabel')[0].hidden = true;
+                    }
+                    break;
+            }
+        }
+
+    </script>
+    <title>Check JS heurisitc</title>
+</head>
+
+<body>
+    <form action="https://sovetkali.github.io/success.html">
+        <input type="text" placeholder="Имя" id="first_name">
+        <br>
+        <input type="text" placeholder="Фамилия" id="last_name">
+        <br>
+        <input type="text" placeholder="Почта" id="email">
+        <br>
+        <input type="text" placeholder="Телефон" id="phone">
+        <br>
+        <label for="doc_type">Документ:</label>
+        <select name="doctypes" id="doc_type" onchange="main()">
+            <option value="empty"></option>
+            <option value="passport">Паспорт</option>
+            <option value="intpassport">Загранпаспорт</option>
+            <option value="inn">ИНН</option>
+            <option value="snils">СНИЛС</option>
+        </select>
+        <br>
+        <div id="custom_data">
+            <label>Номер:</label>
+            <input type='text' id='' name="number">
+            <br>
+            <label name="dateLabel">Дата:</label> 
+            <input type='date' id='' name="date">
+            <br>
+            <label>Дополнительная информация:</label>
+            <br>
+            <input id='' name="add_info">
+            <br>
+        </div>
+        <input type='submit' name='' id=''>
+    </form>
+    <br>
+    <br>
+    <form action="https://sovetkali.github.io/success.html">
+        <input type="text" placeholder="Имя" id="first_name2">
+        <br>
+        <input type="text" placeholder="Фамилия" id="last_name2">
+        <br>
+        <input type="text" placeholder="Почта" id="email2">
+        <br>
+        <input type="text" placeholder="Телефон" id="phone2">
+        <br>
+        <label for="doc_type">Документ:</label>
+        <select name="doctypes" id="doc_type2" onchange="main()">
+            <option value="empty"></option>
+            <option value="passport">Паспорт</option>
+            <option value="intpassport">Загранпаспорт</option>
+            <option value="inn">ИНН</option>
+            <option value="snils">СНИЛС</option>
+        </select>
+        <br>
+        <div id="custom_data">
+            <label>Номер:</label>
+            <input type='text' id='' name="number2">
+            <br>
+            <label name="dateLabel">Дата:</label> 
+            <input type='date' id='' name="date2">
+            <br>
+            <label>Дополнительная информация:</label>
+            <br>
+            <input id='' name="add_info2">
+            <br>
+        </div>
+        <input type='submit' name='' id=''>
+    </form>
+
+</body>
+
+</html>
