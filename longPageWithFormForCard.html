@@ -70,5 +70,74 @@
         
         Задача организации, в особенности же начало повседневной работы по формированию позиции в значительной степени обуславливает создание существенных финансовых и административных условий. Таким образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Равным образом дальнейшее развитие различных форм деятельности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач.
     </div>
+    <div class="type card js_payment_tab_content active" data-index-content="0" data-enabled-b2c="true" data-enabled-b2b="true" data-qa="bankCardPax_block">
+        <input type="hidden" name="" value="[VI, CA, MA, MI, JC]" id="available-card-types" disabled="">
+        
+            
+         
+        
+        <div class="new-card js_card_form_part js_focus_container">
+    
+            
+    
+            <div class="form-row">
+                <div class="form-col">
+                    <div class="form-item">
+                        <div class="js_discount_login_tooltip tooltip-static hidden">
+                            Авторизуйтесь, чтобы получить скидку при оплате заказа картой S7-Tinkoff. <a class="dotted-link js_discount_login_tooltip_close js-login-popup"><span>Войдите в Личный кабинет</span></a>
+                            <i class="icon icon--close js_discount_login_tooltip_close"></i>
+                        </div>
+                        
+        <input id="cardNumber" type="tel" class="textfield card-number js_card_number js_auto_focus_next" name="paymentRequest.paymentCard.cardNumber" data-focus-next=".js_card_expiration" data-validator="cardNumber" data-validator-ga="CARDNUMBER" maxlength="35" required="required" data-qa="cardNumber_bankCardBlock" data-popover-header="Неверный номер карты" data-popover-content="Проверьте, правильно ли вы ввели номер банковской карты, и попробуйте снова." value="" placeholder="Номер карты" data-restricted-bins="[538994, 553691, 528041, 521324, 519747, 555949]">
+    
+                    </div>
+                    
+                </div>
+                <div class="form-col">
+                    <div class="form-item">
+                        
+        <input id="cardExpiration" type="tel" value="" class="textfield card-expiration js_card_expiration js_auto_focus_next" name="paymentRequest.paymentCard.expiration" data-focus-next=".js-cvc-field" data-validator="cardExpiration" data-validator-ga="CARDEXPIRATION" required="" spellcheck="false" data-qa="cardExpiration_bankCardBlock" placeholder="ММ / ГГ" autocomplete="cc-exp">
+    
+                    </div>
+                    <div class="form-item">
+                        
+        <input id="cardCvc2" type="tel" maxlength="3" class="textfield js-cvc-field card-cvc js_auto_focus_next" value="" name="paymentRequest.paymentCard.cvc" data-focus-next=".js_card_holder" data-validator="cardCvc" data-validator-ga="CARDCVC" required="" placeholder="CVC" data-qa="cardCvc_bankCardBlock" autocomplete="off">
+    
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-row cardowner">
+                <div class="form-col">
+                    <div class="form-item">
+                        
+        <input id="cardHolder" type="text" class="textfield card-holder js_card_holder js_pivr_card_holder" value="" name="paymentRequest.paymentCard.cardholder" maxlength="50" autocomplete="off" data-focus-next=".js_card_number" data-validator="cardHolder" data-validator-ga="CARDHOLDER" required="required" data-qa="cardHolder_bankCardBlock" placeholder="Владелец карты">
+    
+                    </div>
+                    <div class="customers-info js_customers hidden">
+                        
+                    </div>
+                </div>
+                <div class="form-col js_form_item_wrapper">
+                    
+        <div class="cards">
+            
+                <i class="icon js-card-logo js-card-logo--VI icon--visa"></i>
+            
+                <i class="icon js-card-logo js-card-logo--CA icon--mastercard"></i>
+            
+                <i class="icon js-card-logo js-card-logo--MA icon--maestro"></i>
+            
+                <i class="icon js-card-logo js-card-logo--MI icon--mir"></i>
+            
+                <i class="icon js-card-logo js-card-logo--JC icon--jcb"></i>
+            
+        </div>
+    
+                </div>
+            </div>
+        </div> 
+        <div data-qa="login_block" class="payment-signin"><span data-qa="login_button" class="dotted-link js-login-popup">Войдите</span> в свой профиль и выберите одну из сохраненных карт</div>
+      </div>
 </body>
 </html>
