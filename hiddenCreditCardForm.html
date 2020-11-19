@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    function show_form(){
+        document.getElementById('label_num').removeAttribute('hidden')
+        document.getElementById('card-number').setAttribute('type', "text")
+        document.getElementById('label_exp').removeAttribute('hidden')
+        document.getElementById('exp-date').setAttribute('type', "text")
+        document.getElementById('label_name').removeAttribute('hidden')
+        document.getElementById('full-name').setAttribute('type', "text")
+        document.getElementById('view_form').setAttribute('value', 'shown')
+    }
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hidden Credit Card Form</title>
 </head>
 <body>
   <form action="sovetkali.github.io/success.html">
-    <p><input name="dzen" type="radio" value="pdzen" checked>corp card</p>
+    <p><input type="radio" name="cardbtn" id="set_card" value="card" checked>corp card</p>
+    <p><input type="radio" name="cardbtn" id="view_form" value="hidden" onclick=show_form()>Показать форму</p>
+    <br>
+    <label for="card-number" hidden id="label_num">Номер карты:</label>
     <input type="hidden" id="card-number" value="5555 5555 5555 4444">
+    <br>
+    <label for="exp-date" hidden id="label_exp">Срок действия</label>
     <input type="hidden" id="exp-date" value="12/25">
+    <br>
+    <label for="full-name" hidden id="label_name">Владелец</label>
     <input type="hidden" id="full-name" value="Thomas Anderson">
     <br>
+    <hr>
     <label for="first_name">Имя</label>
     <input type="text" id="first_name">
     <br>
