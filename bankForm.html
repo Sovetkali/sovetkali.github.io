@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function show_form(){
+      document.getElementById('phone').removeAttribute('hidden')
+      document.getElementById('address').removeAttribute('hidden')
+    }
+  </script>
+  <title>Credit Card Form with E-mail</title>
+</head>
+<body>
+  <form action="/success.html">
+    <p><input type="radio" name="cardbtn" id="view_form" value="hidden" onclick=show_form()>Показать телефон/адрес</p>
+    <br>
+    <label for="card_number">Номер карты:</label>
+    <input id="card_number" type="text">
+    <br>
+    <label for="expiry_date">Срок действия</label>
+    <input type="text" id="expiry_date">
+    <br>
+    <label for="full_name">Владелец</label>
+    <input type="text" id="full_name">
+    <br>
+    <label for="phone">Телефон:</label>
+    <input type="text" id="phone" hidden>
+    <br>
+    <label for="phone">Адрес:</label>
+    <input type="text" id="address" hidden>
+    <br>
+    <input type="submit" value="Оплатить">
+  </form>
+</body>
+</html>
