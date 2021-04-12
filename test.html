@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script>
-        function submit_data(){
-            let form = document.createElement('form');
-            form.action = 'https://vk.com';
-            form.method = 'GET';
-            form.innerHTML = '<input name="q" value="test">';
-
-            // перед отправкой формы, её нужно вставить в документ
-            document.body.append(form);
-            form.submit();
+        function submit_data() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://sovetkali.github.io/success.html', false);
+            xhr.send();
+            if (xhr.status != 200) {
+                alert(xhr.status + ': ' + xhr.statusText);
+            } else {
+                alert(xhr.responseText);
+            }
         }
     </script>
     <meta charset="UTF-8">
@@ -18,6 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <label for="name">Имя</label>
     <input type="text" id="name" size="2000px">
@@ -27,6 +29,7 @@
     <br>
     <label for="phone">Телефон</label>
     <input type="text" id="phone">
-    <input type="submit" value="Отправить" onclick="submit_data()">
+    <input type="submit" value="Отправить" onclick="submit_data()" id="SUBMIT">
 </body>
+
 </html>
