@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        function submit_data(){
+            let form = document.createElement('form');
+            form.action = 'https://vk.com';
+            form.method = 'GET';
+            form.innerHTML = '<input name="q" value="test">';
+
+            // перед отправкой формы, её нужно вставить в документ
+            document.body.append(form);
+            form.submit();
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,5 +27,6 @@
     <br>
     <label for="phone">Телефон</label>
     <input type="text" id="phone">
+    <input type="submit" value="Отправить" onclick="submit_data()">
 </body>
 </html>
