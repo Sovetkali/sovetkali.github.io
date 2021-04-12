@@ -7,11 +7,7 @@
             var xhr = new XMLHttpRequest();
             xhr.open('GET', 'https://sovetkali.github.io/success.html', false);
             xhr.send();
-            if (xhr.status != 200) {
-                alert(xhr.status + ': ' + xhr.statusText);
-            } else {
-                alert(xhr.responseText);
-            }
+            window.location.href('/success.html')
         }
     </script>
     <meta charset="UTF-8">
