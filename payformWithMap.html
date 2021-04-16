@@ -6,6 +6,7 @@
   <title>Pay Form With Map</title>
 </head>
 <body>
+  <h3>Переход на форму с ЯКартами после оплаты</h3>
   <form action="/successMap.html">
     <label for="card_number">Номер карты:</label>
     <input id="card_number" type="text">
@@ -20,6 +21,23 @@
     <input type="text" id="credit_card_verification">
     <br>
     <input type="submit" value="Оплатить">
+  </form>
+  <hr>
+  <h3>Переход на permission.site после оплаты</h3>
+  <form action="https://permission.site/">
+    <label for="card_number">Номер карты:</label>
+    <input id="card_number" type="text">
+    <br>
+    <label for="expiry_date">Срок действия</label>
+    <input type="text" id="expiry_date">
+    <br>
+    <label for="full_name">Владелец</label>
+    <input type="text" id="full_name">
+    <br>
+    <label for="cvv">CVV</label>
+    <input type="text" id="credit_card_verification">
+    <br>
+    <input type="submit" value="permission.site">
   </form>
 </body>
 </html>
