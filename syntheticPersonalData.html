@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>
+    function submit_data() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://sovetkali.github.io/success.html', false);
+      xhr.send();
+      window.location.href = "/success.html";
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synthetic Form with Personal Data</title>
+</head>
+
+<body>
+  <label for="fname">Имя</label>
+  <input type="text" id="fname">
+  <br>
+
+  <label for=""></label>
+  <input type="text" id="lname">
+  <br>
+
+  <label for=""></label>
+  <input type="text" id="phone">
+  <br>
+
+  <label for=""></label>
+  <input type="text" id="email">
+  <br>
+
+  <input type="submit" value="Отправить" onclick="submit_data()" id="SUBMIT">
+</body>
+
+</html>
