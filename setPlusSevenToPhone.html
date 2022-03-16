@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function addSeven() {
+            let phone = document.getElementById("withSeven");
+            phone.value = "+7";
+        }
+        
+        function addEight() {
+            let phone = document.getElementById("withEight");
+            phone.value = "8";
+        }
+        
+        function removePrefix(prefix) {
+            let phone = document.getElementById(prefix);
+            phone.value = null;
+        }
+        
+        function addPhoneBlock(){
+            let result = document.getElementById("phoneBlock");
+            result.innerHTML = '';
+            
+            codeID = this.value;
+            switch(codeID) {
+                case 'seven':
+                    result.innerHTML = "<label for=\"withSeven\">Телефон (+7) </label><input class=\"phone\" id=\"withSeven\" onfocus=\"addSeven()\" onfocusout=\"removePrefix(\"withSeven\")\"><br>";
+                    break;
+                case 'eight':
+                    result.innerHTML = "<label for=\"withEight\">Телефон (8) </label><input class=\"phone\" id=\"withEight\" onfocus=\"addEight()\" onfocusout=\"removePrefix('withEight')\"><br>";
+                    break;
+                case 'empty':
+                    result.innerHTML = "<label for=\"withEight\">Телефон (без кода) </label><input class=\"phone\" id=\"empty\"><br>";
+                    break;
+                default:
+                    result.innerHTML = '';
+            }
+        }
+
+        window.onload = function(){
+            let select = document.getElementById("code");
+            select.addEventListener('change', addPhoneBlock);
+        }
+
+    </script>
+    <title>Set code to phone input</title>
+</head>
+
+<body>
+    <form action="/success.html">
+        <label for="fname">Имя</label>
+        <input type="text" id="fname">
+        <br>
+
+        <label for="lname">Фамилия</label>
+        <input type="text" id="lname">
+        <br>
+        
+        <label for="code">Код телефона</label>
+        <select name="" id="code">
+            <option value="seven">+7</option>
+            <option value="eight">8</option>
+            <option value="empty">Без кода</option>
+            <option value="" selected>Скрыть</option>
+        </select>
+        <br>
+
+        <p id="phoneBlock">
+        </p>
+
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+
+</html>
