@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        
+        function addPhoneBlock(){
+            let result = document.getElementById("FIOBlock");
+            result.innerHTML = '';
+            
+            codeID = this.value;
+            switch(codeID) {
+                case 'FIO':
+                    result.innerHTML = `<label for=\"FIO\">ФИО: </label><input id=\"FIO\" \"><br>`;
+                    break;
+                case 'FI':
+                    result.innerHTML = `<label for=\"FI\">ФИ: </label><input id=\"FI\" \"><br>`;
+                    break;
+                case 'IF':
+                    result.innerHTML = "<label for=\"IF\">ИФ: </label><input id=\"IF\"><br>";
+                    break;
+                case 'IO':
+                    result.innerHTML = "<label for=\"IO\">ИО: </label><input id=\"IO\"><br>";
+                    break;
+                default:
+                    result.innerHTML = '';
+            }
+        }
+
+        window.onload = function(){
+            let select = document.getElementById("code");
+            select.addEventListener('change', addPhoneBlock);
+        }
+
+    </script>
+    <title>FIO</title>
+</head>
+
+<body>
+    <form action="/success.html">
+        <label for="code">Выбрать вариант ФИО:</label>
+        <select name="" id="code">
+            <option value="FIO">ФИО</option>
+            <option value="FI">ФИ</option>
+            <option value="IF">ИФ</option>
+            <option value="IO">ИО</option>
+            <option value="" selected>Скрыть</option>
+        </select>
+        <br>
+        <p id="FIOBlock">
+        </p>
+
+        <label for="phone">Телефон:</label>
+        <input type="text" id="phone">
+        <br>
+
+        <label for="email">Почта:</label>
+        <input type="text" id="email">
+        <br>
+
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+
+</html>
