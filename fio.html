@@ -13,9 +13,6 @@
             
             codeID = this.value;
             switch(codeID) {
-                case 'FIO':
-                    result.innerHTML = `<label for=\"FIO\">ФИО: </label><input id=\"FIO\" \"><br>`;
-                    break;
                 case 'FI':
                     result.innerHTML = `<label for=\"FI\">ФИ: </label><input id=\"FI\" \"><br>`;
                     break;
@@ -43,7 +40,7 @@
     <form action="/success.html">
         <label for="code">Выбрать вариант ФИО:</label>
         <select name="" id="code">
-            <option value="FIO">ФИО</option>
+
             <option value="FI">ФИ</option>
             <option value="IF">ИФ</option>
             <option value="IO">ИО</option>
@@ -51,6 +48,8 @@
         </select>
         <br>
         <p id="FIOBlock">
+          <label for="FIO">ФИО: </label><input id="FIO">
+          <br>
         </p>
 
         <label for="phone">Телефон:</label>
