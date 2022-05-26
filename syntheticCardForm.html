@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>
+    function submit_data() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://sovetkali.github.io/success.html', false);
+      xhr.send();
+      window.location.href = "/success.html";
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synthetic Form with Personal Data</title>
+</head>
+
+<body>
+  <label for="fname">Номер карты:</label>
+  <input type="text" id="cardNum">
+  <br>
+
+  <label for="">Срок действия:</label>
+  <input type="text" id="expireDate">
+  <br>
+
+  <label for="">Владелец:</label>
+  <input type="text" id="cardHolder">
+  <br>
+
+  <label for="">cvv:</label>
+  <input type="text" id="cvv">
+  <br>
+
+  <input type="submit" value="Отправить" onclick="submit_data()" id="SUBMIT">
+</body>
+
+</html>
