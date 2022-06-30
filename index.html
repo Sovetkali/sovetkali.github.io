@@ -26,11 +26,27 @@
         <h2>Личные данные</h2>
         <div>
             <ol>
-              <li><a href="/addressComponents.html" target="_blank">Адрес разбитый на ул/дом/подъезд/этаж/кв/коммент</a></li>
-              <li><a href="/checkDOBsave.html">Имя/Фам/Тел/ДР(<b>3 поля</b>)</a></li>
-              <li><a href="/checkDOBsave2.html">Имя/Фам/Тел/ДР(<b>1 поле</b>)</a></li>
-              <li><a href="/checkMixSuggest.html">Имя/Фам/Тел/Ряд (поле в фокусе). Для теста истор./комбо саджеста</a></li>
-              <li><a href=""></a></li>
+              <li><a href="/addressComponents.html" target="_blank">Имя/Фам/Тел/Почта + Адрес разбитый на ул/дом/подъезд/этаж/кв/коммент</a></li>
+              <li><a href="/checkDOBsave.html" target="_blank">Имя/Фам/Тел/ДР(<b>3 поля</b>)</a></li>
+              <li><a href="/checkDOBsave2.html" target="_blank">Имя/Фам/Тел/ДР(<b>1 поле</b>)</a></li>
+              <li><a href="/checkMixSuggest.html" target="_blank">Имя/Фам/Тел/Ряд (поле в фокусе). Для теста истор./комбо саджеста</a></li>
+              <li><a href="/custom_form.html" target="_blank">Кастомные данные (паспорт/загран/инн/снилс)</a></li>
+              <li><a href="/dropdownlist.html" target="_blank">Имя/Фам/Тел/Город(селектор)</a></li>
+              <li><a href="/dynamincForm.html" target="_blank">Имя/Фам/Тел/Почта(динам. добавляется)</a></li>
+              <li><a href="/editProfile.html" target="_blank">Форма с личными данными (предзаполненная/не предзаполненная)</a> и <a href="/enterToProfile.html" target="_blank">переход на эту форму</a></li>
+              <li><a href="/fio.html" target="_blank">ФИО / ИФ / ФИ / ИО</a></li>
+              <li><a href="/formInIFrame.html" target="_blank">Имя/Фам/Тел/Почта в фрейме</a></li>
+              <li><a href="/formWithAddress.html" target="_blank">ФИО/Тел/Почта/Страна/Город/Улица</a></li>
+              <li><a href="/nope" target="_blank">Имя/Фам/тел/почта (autocomplete=nope)</a></li>
+              <li><a href="/on" target="_blank">Имя/Фам/тел/почта (autocomplete=on)</a></li>
+              <li><a href="/real_off.html" target="_blank">Имя/Фам/тел/почта (autocomplete=off)</a></li>
+              <li><a href="/prefilledFIO.html" target="_blank">Предзаполненные ФИО</a></li>
+              <li><a href="/prefilledForm.html" target="_blank">Предзаполненные Имя/Фам/тел/ул</a></li>
+              <li><a href="/prefilledStreet.html" target="_blank">Предзаполненная ул без редактирования</a></li>
+              <li><a href="/sendFile.html" target="_blank">Имя/Тел/Загрузка файла</a></li>
+              <li><a href="/setPhoneCode.html" target="_blank">Имя/Фам/Выбор формата телефона</a></li>
+              <li><a href="/syntheticPersonalData.html" target="_blank">Cинтетическая форма (без form)</a></li>
+              
             </ol>
         </div>
       </div>
@@ -38,11 +54,18 @@
         <h2>Банковские карты</h2>
         <div>
           <ol>
-            <li><a href="/bankForm.html" target="_blank">Обычная форма с возможностью добавить почту и тел</a></li>
+            <li><a href="/bankForm.html" target="_blank">Обычная форма (без cvv) с почтой и тел</a></li>
+            <li><a href="/creditCardFormWithEmail.html" target="_blank">Обычная форма (с cvv) с почтой, тел и адресом</a></li>
             <li><a href="/bankForm4Inputs.html" target="_blank">Номер карты разбит на 4 поля</a></li>
-            <li><a href="http://" target="_blank"></a></li>
-            <li><a href="http://" target="_blank"></a></li>
-            <li><a href="http://" target="_blank"></a></li>
+            <li><a href="/hiddenCreditCardForm.html" target="_blank">Показать скрытую форму оплаты</a></li>
+            <li><a href="/hidesmscode.html" target="_blank">Скрытие смс-кода по name=captcha/otp/sms/code</a></li>
+            <li><a href="/otpCodes.html" target="_blank">Динамическое значение для отп-кода. Вводим <i>id/class="<значение>" и кликаем в тело</i></i></a></li>
+            <li><a href="/passmanWithpay.html" target="_blank">Авторизация > оплата</a></li>
+            <li><a href="/payformWithMap.html" target="_blank">Оплата > фрейм (yandex maps)</a></li>
+            <li><a href="/popIframe.html" target="_blank">Оплата в фрейме</a></li>
+            <li><a href="/prefilledCardForm.html" target="_blank">Предзаполненный номер карты</a></li>
+            <li><a href="/syntheticCardForm.html" target="_blank">Cинтетическая форма (без form)</a></li>
+            
           </ol>
         </div>
       </div>
@@ -53,8 +76,9 @@
             <li><a href="/authform.html" target="_blank">Обычная форма с логином и паролем</a></li>
             <li><a href="/autofocusPassword.html" target="_blank">Пароль в фокусе</a></li>
             <li><a href="/checkPassmanNewPasswordType.html" target="_blank">Тест всех типов пароля (новый/подтверждение/текущий)</a></li>
-            <li><a href="/clearinputs.html" target="_blank">Логин и пароль очищаются через 7 сек.</a></li>
-            
+            <li><a href="/clearinputs.html" target="_blank">Логин и пароль очищаются через 10 сек.</a></li>
+            <li><a href="/showpasstext.html" target="_blank">Логин и пароль (показ пароля)</a></li>
+            <li><a href="/syntheticPasswordForm.html" target="_blank">Cинтетическая форма (без form)</a></li>
           </ol>
         </div>
       </div>
