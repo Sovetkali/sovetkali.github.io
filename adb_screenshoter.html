@@ -13,6 +13,7 @@
 ./adb devices
 ./adb shell screencap -p /sdcard/image.png;
 ./adb pull /sdcard/image.png ${path}
+./adb shell rm /sdcard/image.png
 cd ${path}
 name=$RANDOM.png
 mv image.png $name
@@ -22,6 +23,7 @@ open ${path}/$name`
 ./adb devices
 ./adb shell screencap -p /sdcard/image.png;
 ./adb pull /sdcard/image.png ${path}
+./adb shell rm /sdcard/image.png
 cd ${path}
 mv image.png $RANDOM.png`
       }
